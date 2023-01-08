@@ -23,8 +23,8 @@ public:
   void translater(int deltaX, int deltaY);
   Coordonnee getAncrage();
   void setAncrage(Coordonnee c);
-  virtual double aire() = 0;
-  virtual void afficher(ostream & s) = 0;
+  virtual double aire() const = 0;
+  virtual void afficher(ostream & s) const = 0;
 protected:
 	Coordonnee ancrage;
 };
