@@ -2,7 +2,7 @@
  * Fichier: rectangle.cpp
  * Auteurs: Louis-Xavier Gélinas
  * Date: 07 janvier 2023 (creation)
- * Description: Declaration de la classe rectangle.
+ * Description: Implementation des methodes des classes decrites dans rectangle.
  *    Ce fichier fait partie de la distribution de Graphicus.
 ********/
 

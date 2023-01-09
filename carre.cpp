@@ -2,7 +2,7 @@
  * Fichier: carre.cpp
  * Auteurs: Louis-Xavier Gélinas
  * Date: 07 janvier 2023 (creation)
- * Description: Declaration de la classe carre.
+ * Description: Implementation des methodes des classes decrites dans carre.
  *    Ce fichier fait partie de la distribution de Graphicus.
 ********/
 

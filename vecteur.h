@@ -1,3 +1,15 @@
+/********
+ * Fichier: vecteur.h
+ * Auteurs: Louis-Xavier Gélinas
+ * Date: 09 janvier 2023 (creation)
+ * Description: Declaration de la classe vecteur.
+ *    Ce fichier fait partie de la distribution de Graphicus.
+********/
+
+#ifndef VECTEUR_H
+#define VECTEUR_H
+
+
 #include <iostream>
 #include <assert.h>
 
@@ -32,3 +44,5 @@ public:
 
 template<class TYPE>
 ostream& operator<<(ostream& stream, const Vecteur<TYPE>& vec);
+
+#endif

@@ -1,4 +1,10 @@
-
+/********
+ * Fichier: vecteur.cpp
+ * Auteurs: Louis-Xavier Gélinas
+ * Date: 09 janvier 2023 (creation)
+ * Description: Implementation des methodes des classes decrites dans vecteur.
+ *    Ce fichier fait partie de la distribution de Graphicus.
+********/
 
 #include "vecteur.h"
 
