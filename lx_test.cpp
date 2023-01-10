@@ -1,6 +1,7 @@
 
 
 //TODO : Lors de la création, vérifier si le point d'encrage est dans la forme???
+//TODO : forme.cpp destructeur, destruction de la struct coordonnee???
 
 
 #include "carre.cpp"
@@ -14,7 +15,6 @@ using namespace std;
 
 int main()
 {
-
 
     /*
     Rectangle r(1,3, {0,0});

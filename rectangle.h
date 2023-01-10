@@ -9,15 +9,29 @@
 #ifndef RECTANGLE_H
 #define RECTANGLE_H
 
-#include "forme.cpp"
 #include <assert.h>
+#include "forme.cpp"
 
 class Rectangle : public Forme
 {
 public:
+
+    //Constructeurs/Destructeur
     Rectangle(double = 0, double = 0, Coordonnee = {0,0});
     virtual ~Rectangle();   //! Le destructeur de Forme est appelé par défaut puisqu'il est virtuel* https://www.geeksforgeeks.org/virtual-destructor/
+
+    //Getters
+    double getLargeur() const;
+    double getHauteur() const;
+
+    //Setters
     virtual void setSize(double = 0, double = 0);
+    
+    //Surcharge d'opérateurs
+    Rectangle& operator=(Rectangle&);
+    bool operator==(Rectangle&) const;
+
+    //Autres
     double aire() const;
     void afficher(ostream&) const;
 

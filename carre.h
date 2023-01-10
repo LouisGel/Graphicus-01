@@ -14,9 +14,22 @@
 class Carre : public Rectangle
 {
 public:
+
+    //Constructeurs/Destructeur
     Carre(double = 0, Coordonnee = {0,0});
     ~Carre();
+
+    //Getters
+    //! On en a besoin???
+
+    //Setters
     void setSize(double = 0);
+
+    //Surcharge d'opérateurs
+    Carre& operator=(Carre&);
+    bool operator==(Carre&) const;
+
+    //Autres
     double aire() const;
     void afficher(ostream&) const;
 };
