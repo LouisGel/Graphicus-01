@@ -84,8 +84,9 @@ void Vecteur<TYPE>::print(ostream& sortie) const
 
 
 template <class TYPE>
-void Vecteur<TYPE>::push_back(const TYPE& elem)
+bool Vecteur<TYPE>::push_back(const TYPE& elem)
 {
+    if(elem == nullptr) return false;
     if(_dim == _capacity)
     {
         _capacity = (_capacity == 0) ? _capacity = 2 : _capacity = _capacity * 2;
@@ -101,12 +102,13 @@ void Vecteur<TYPE>::push_back(const TYPE& elem)
         *(_tab + _dim) = elem;
     }
     _dim++;
+    return true;
 }
 
 template <class TYPE>
 TYPE& Vecteur<TYPE>::at(int pos) const
 {
-    //! ATTENTION ! Pas bon, mais selon la structure, imposstible de renvoyer un nullptr
+    //! ATTENTION ! Pas bon, mais selon la structure, impossible de renvoyer un nullptr
     assert(_dim > pos);
     return *(_tab + pos);
 }

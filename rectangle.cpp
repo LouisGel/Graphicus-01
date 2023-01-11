@@ -59,7 +59,11 @@ double Rectangle::aire() const
 
 void Rectangle::afficher(ostream& stream) const
 {
-    stream << _hauteur << endl << _largeur << endl;
+    stream  << "Rectangle(x=" << ancrage.x << endl
+            << ", y=" << ancrage.y << endl
+            << ", l=" << _largeur << endl
+            << ", l=" << _largeur << endl
+            << ", aire=" << aire() << ")" << endl;
 }
 
 ostream& operator<<(ostream& stream, const Rectangle rectangle)

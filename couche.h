@@ -11,15 +11,38 @@
 #ifndef COUCHE_H
 #define COUCHE_H
 
-//#include "vecteur.h"
-//#include "forme.h"
+#define INITIALISEE 73  //ASCII value for I
+#define ACTIVE 65       //ASCII value for A
+#define INACTIVE 78     //ASCII value for N
+
+#include "vecteur.h"
+#include "forme.h"
 
 class Couche
 {
 public:
+    Couche();
+    ~Couche();
+
+    bool ajouterForme(Forme*);
+    Forme* enleverForme(int);
+    Forme* getForme(int) const;
+    double aireTotale() const;
+    bool translation(int horizontale, int verticale);
+    void afficher(ostream&) const;
+
+    bool reinitialiser();
+
+    bool setActive();
+    bool setInactive();
+    bool isActive() const;
+    bool isInactive() const;
 
 protected:
-    //Vecteur<Forme*> _formes;
+    Vecteur<Forme*> _formes;
+    char _state;
 };
+
+ostream& operator<<(ostream&, const Couche);
 
 #endif

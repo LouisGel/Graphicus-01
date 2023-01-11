@@ -38,7 +38,7 @@ public:
 	TYPE& at(int pos) const;
 	TYPE& operator[](int pos) const;
 
-    void push_back(const TYPE&);
+    bool push_back(const TYPE&);
     TYPE pop(int);
 };
 

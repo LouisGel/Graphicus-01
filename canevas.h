@@ -26,18 +26,20 @@ public:
    
    bool reinitialiser();
    
-   bool activerCouche(int index);
-   bool cacherCouche(int index);
+   bool activerCouche(int);
+   bool cacherCouche(int);
    
-   bool ajouterForme(Forme *p_forme);
-   bool retirerForme(int index);
+   bool ajouterForme(Forme*);
+   bool retirerForme(int);
    
    double aire();
-   bool translater(int deltaX, int deltaY);
-   void afficher(ostream & s);
+   bool translater(int, int);
+   void afficher(ostream&);
+
+   Couche* getCoucheActive();
 
 private:
-     Couche couches[MAX_COUCHES];
+    Couche couches[MAX_COUCHES];
 };
 
 #endif
