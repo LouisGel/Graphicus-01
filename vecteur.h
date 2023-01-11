@@ -35,8 +35,8 @@ public:
     TYPE& getTab() const;
     void print(ostream&) const;
 
-	TYPE at(int pos) const;             //! TODO : Aurait préféré TYPE&
-	TYPE operator[](int pos) const;
+	TYPE& at(int pos) const;
+	TYPE& operator[](int pos) const;
 
     void push_back(const TYPE&);
     TYPE pop(int);

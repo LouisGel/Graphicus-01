@@ -104,14 +104,15 @@ void Vecteur<TYPE>::push_back(const TYPE& elem)
 }
 
 template <class TYPE>
-TYPE Vecteur<TYPE>::at(int pos) const
+TYPE& Vecteur<TYPE>::at(int pos) const
 {
-    if(pos > _dim) return TYPE{};
+    //! ATTENTION ! Pas bon, mais selon la structure, imposstible de renvoyer un nullptr
+    assert(_dim > pos);
     return *(_tab + pos);
 }
 
 template <class TYPE>
-TYPE Vecteur<TYPE>::operator[](int pos) const
+TYPE& Vecteur<TYPE>::operator[](int pos) const
 {
     return this->at(pos);
 }

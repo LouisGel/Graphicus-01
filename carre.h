@@ -30,8 +30,7 @@ public:
     bool operator==(Carre&) const;
 
     //Autres
-    double aire() const;
-    void afficher(ostream&) const;
+    //! Pa de besoin
 };
 
 ostream& operator<<(ostream&, const Carre);

@@ -41,14 +41,6 @@ bool Carre::operator==(Carre& carre) const
             carre.getAncrage().y == ancrage.y);
 }
 
-double Carre::aire() const{ 
-    return _hauteur * _largeur; 
-}
-
-void Carre::afficher(ostream& stream) const {
-    stream << _hauteur << endl << _largeur << endl;
-}
-
 ostream& operator<<(ostream& stream, const Carre carre) {
     carre.afficher(stream);
     return stream;

@@ -53,6 +53,12 @@ int main()
     //Vecteur<float> y(1);
     //Vecteur<Forme> z(1);
 
+
+    int** x{};
+    if(x == nullptr) cout << "bonjour";
+    cout << "Test : " << x << endl;
+
+
     Vecteur<Forme*> forme;
     cout << forme.isEmpty() << endl;
     forme.push_back(new Carre(2));
@@ -71,7 +77,11 @@ int main()
     Vecteur<int> ints;
     ints.push_back(2);
     cout << "TEST INT" << endl;
+    cout << ints[10] << endl;
+    ints.at(0) = 4;
     cout << ints[0] << endl;
+
+
     int removedInt;
     removedInt = ints.pop(7);
     if(removedInt == 0) cout << "Oui!";

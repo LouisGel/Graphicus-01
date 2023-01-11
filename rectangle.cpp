@@ -30,9 +30,9 @@ double Rectangle::getHauteur() const
 
 void Rectangle::setSize(double hauteur, double largeur)
 {
-    assert(hauteur >= 0);
+    assert(hauteur >= 0 && largeur >= 0);
     _hauteur = hauteur;
-    _largeur = (largeur >= 0) ? largeur : hauteur;
+    _largeur = largeur;
 }
 
 Rectangle& Rectangle::operator=(Rectangle& rectangle)
