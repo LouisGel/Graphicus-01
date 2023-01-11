@@ -11,7 +11,7 @@
 
 #include <cmath>
 #include <assert.h>
-#include "forme.cpp"
+#include "forme.h"
 
 class Cercle : public Forme
 {

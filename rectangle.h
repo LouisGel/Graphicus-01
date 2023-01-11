@@ -10,7 +10,7 @@
 #define RECTANGLE_H
 
 #include <assert.h>
-#include "forme.cpp"
+#include "forme.h"
 
 class Rectangle : public Forme
 {

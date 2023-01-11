@@ -11,15 +11,15 @@
 #ifndef COUCHE_H
 #define COUCHE_H
 
-#include "vecteur.h"
-#include "forme.h"
+//#include "vecteur.h"
+//#include "forme.h"
 
 class Couche
 {
 public:
 
 protected:
-    Vecteur<Forme*> _formes;
+    //Vecteur<Forme*> _formes;
 };
 
 #endif

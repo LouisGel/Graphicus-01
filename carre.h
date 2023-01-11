@@ -9,7 +9,7 @@
 #ifndef CARRE_H
 #define CARRE_H
 
-#include "rectangle.cpp"
+#include "rectangle.h"
 
 class Carre : public Rectangle
 {
