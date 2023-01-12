@@ -29,4 +29,6 @@ protected:
 	Coordonnee ancrage;
 };
 
+ostream& operator<<(ostream& stream, const Forme& forme);
+
 #endif

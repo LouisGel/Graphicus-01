@@ -34,3 +34,8 @@ void Forme::setAncrage(Coordonnee c)
 {
    ancrage = c;
 }
+
+ostream& operator<<(ostream& stream, const Forme& forme)
+{
+    forme.afficher(stream);
+}

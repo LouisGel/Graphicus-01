@@ -14,7 +14,7 @@ Rectangle::Rectangle(double hauteur, double largeur, Coordonnee ancrage) : Forme
 }
 
 Rectangle::~Rectangle()
-{ 
+{
     _largeur = _hauteur = 0;
 }
 
@@ -59,10 +59,10 @@ double Rectangle::aire() const
 
 void Rectangle::afficher(ostream& stream) const
 {
-    stream  << "Rectangle(x=" << ancrage.x << endl
-            << ", y=" << ancrage.y << endl
-            << ", l=" << _largeur << endl
-            << ", l=" << _largeur << endl
+    stream  << "Rectangle(x=" << ancrage.x
+            << ", y=" << ancrage.y
+            << ", l=" << _largeur
+            << ", l=" << _largeur
             << ", aire=" << aire() << ")" << endl;
 }
 
