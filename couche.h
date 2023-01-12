@@ -39,7 +39,7 @@ public:
     bool isInactive() const;
 
 protected:
-    Vecteur<Forme*> _formes;
+    Vecteur<Forme> _formes;
     char _state;
 };
 

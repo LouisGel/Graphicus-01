@@ -14,10 +14,7 @@ Vecteur<TYPE>::Vecteur(int dim)
     assert(dim >= 0);
     _dim = dim;
     _capacity = dim*2;
-    if(dim)
-        _tab = new TYPE*[_capacity]();
-    else
-        _tab = nullptr;
+    _tab = (dim) ? new TYPE*[_capacity]() : nullptr; 
 }
 
 template <class TYPE>

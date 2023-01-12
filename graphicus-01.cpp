@@ -13,7 +13,10 @@ int main()
 {
    Tests tests;
    
-   tests.tests_application();
+   //tests.tests_application();
+
+    tests.tests_unitaires_formes();
+
    return 0;
 }
 
