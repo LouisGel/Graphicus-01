@@ -8,7 +8,6 @@
 
 #include "vecteur.h"
 
-//TODO : Lors de la création, on met _capacity à dimx2???
 template <class TYPE>
 Vecteur<TYPE>::Vecteur(int dim)
 {
@@ -16,8 +15,7 @@ Vecteur<TYPE>::Vecteur(int dim)
     _dim = dim;
     _capacity = dim*2;
     if(dim)
-        _tab = new TYPE[_capacity]();   //!Les parenthèses set tout les items à 0 (Parce qu'on appel le constructeur et qu'il a des valeurs par défaut???)
-        //TODO : WTF Quessé g fait lo? Faire :      _tab = new TYPE*[_capacity]();
+        _tab = new TYPE*[_capacity]();
     else
         _tab = nullptr;
 }
@@ -28,9 +26,9 @@ Vecteur<TYPE>::Vecteur(const Vecteur& vecteur)
     _dim = vecteur._dim;
     _capacity = vecteur._capacity;
     if(_capacity == 0){
-        this->clear();
+        clear();
     } else {
-        _tab = new TYPE[_capacity];
+        _tab = new TYPE*[_capacity];
         for (int i = 0; i < _dim; i++)
             *(_tab + i) = vecteur._tab[i];
     }
@@ -39,14 +37,15 @@ Vecteur<TYPE>::Vecteur(const Vecteur& vecteur)
 template <class TYPE>
 Vecteur<TYPE>::~Vecteur()
 {
-	clear();
+    clear();
 }
 
 template <class TYPE>
 void Vecteur<TYPE>::clear()
 {
-    //! TODO : Vrai ce truc???
-	delete[] _tab;   //Les [] appel le destructeur de tous les éléments
+    for (int i = 0; i < _dim; i++)  //Appel le destructeur pour tous les éléments
+        delete *(_tab + i);
+	delete[] _tab;  //Détruit le tableau de pointeur
     _dim = _capacity = 0;
 	_tab = nullptr;
 }
@@ -70,27 +69,33 @@ bool Vecteur<TYPE>::isEmpty() const
 }
 
 template <class TYPE>
-TYPE& Vecteur<TYPE>::getTab() const
-{
-	return *_tab;
-}
-
-template <class TYPE>
 void Vecteur<TYPE>::print(ostream& sortie) const
 {
 	for (int i = 0; i < _dim; i++)
 		sortie << *(_tab + i) << " ";
 }
 
+template <class TYPE>
+TYPE* Vecteur<TYPE>::at(int pos) const
+{
+    if(pos > _dim || !_dim) return nullptr;
+    return *(_tab + pos);
+}
 
 template <class TYPE>
-bool Vecteur<TYPE>::push_back(const TYPE& elem)
+TYPE* Vecteur<TYPE>::operator[](int pos) const
+{
+    return at(pos);
+}
+
+template <class TYPE>
+bool Vecteur<TYPE>::push_back(TYPE* elem)
 {
     if(elem == nullptr) return false;
     if(_dim == _capacity)
     {
         _capacity = (_capacity == 0) ? _capacity = 2 : _capacity = _capacity * 2;
-        TYPE* temp_tab = new TYPE[_capacity];
+        TYPE** temp_tab = new TYPE*[_capacity];
         for (int i = 0; i < _dim; i++)
             *(temp_tab + i) = *(_tab + i);
         *(temp_tab + _dim) = elem;
@@ -106,28 +111,14 @@ bool Vecteur<TYPE>::push_back(const TYPE& elem)
 }
 
 template <class TYPE>
-TYPE& Vecteur<TYPE>::at(int pos) const
+TYPE* Vecteur<TYPE>::pop(int pos)
 {
-    //! ATTENTION ! Pas bon, mais selon la structure, impossible de renvoyer un nullptr
-    assert(_dim > pos);
-    return *(_tab + pos);
-}
-
-template <class TYPE>
-TYPE& Vecteur<TYPE>::operator[](int pos) const
-{
-    return this->at(pos);
-}
-
-template <class TYPE>
-TYPE Vecteur<TYPE>::pop(int pos)
-{    
-    if(pos > _dim) return TYPE{};  //https://stackoverflow.com/questions/39429510/what-do-empty-braces-mean-in-struct-declaration
-    TYPE temp = *(_tab + pos);
+    if(pos > _dim) return nullptr;
+    TYPE* temp = *(_tab + pos);
     _dim--;
     for (int i = pos; i < _dim; i++)
         *(_tab + i) = *(_tab + i + 1);
-    *(_tab + _dim + 1) = 0; //On met le dernier elem à 0
+    *(_tab + _dim + 1) = nullptr; //On met le dernier elem à 0
     return temp;
 }
 

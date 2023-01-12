@@ -9,7 +9,6 @@
 #ifndef VECTEUR_H
 #define VECTEUR_H
 
-
 #include <iostream>
 #include <assert.h>
 
@@ -19,7 +18,7 @@ template <class TYPE>
 class Vecteur
 {
 private:
-	TYPE *_tab;
+	TYPE** _tab;
 	int _dim;
 	int _capacity;
 
@@ -32,14 +31,15 @@ public:
     int size() const;
     int capacity() const;
     bool isEmpty() const;
-    TYPE& getTab() const;
+
     void print(ostream&) const;
 
-	TYPE& at(int pos) const;
-	TYPE& operator[](int pos) const;
+    TYPE* at(int pos) const;
+	TYPE* operator[](int pos) const;
 
-    bool push_back(const TYPE&);
-    TYPE pop(int);
+    bool push_back(TYPE*);
+    TYPE* pop(int);
+
 };
 
 template<class TYPE>
