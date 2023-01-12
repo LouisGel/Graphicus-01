@@ -1,12 +1,49 @@
 /********
- * Fichier: vecteur.cpp
+ * Fichier: vecteur.h
  * Auteurs: Louis-Xavier Gélinas
  * Date: 09 janvier 2023 (creation)
- * Description: Implementation des methodes des classes decrites dans vecteur.
+ * Description: Declaration de la classe vecteur.
  *    Ce fichier fait partie de la distribution de Graphicus.
 ********/
 
-#include "vecteur.h"
+#ifndef VECTEUR_H
+#define VECTEUR_H
+
+#include <iostream>
+#include <assert.h>
+
+using namespace std;
+
+template <class TYPE>
+class Vecteur
+{
+private:
+	TYPE** _tab;
+	int _dim;
+	int _capacity;
+
+public:
+	Vecteur(int dim = 0);
+    Vecteur(const Vecteur&);
+	~Vecteur();
+
+	void clear();
+    int size() const;
+    int capacity() const;
+    bool isEmpty() const;
+
+    void print(ostream&) const;
+
+    TYPE* at(int pos) const;
+	TYPE* operator[](int pos) const;
+
+    bool push_back(TYPE*);
+    TYPE* pop(int);
+
+};
+
+template<class TYPE>
+ostream& operator<<(ostream& stream, const Vecteur<TYPE>& vec);
 
 template <class TYPE>
 Vecteur<TYPE>::Vecteur(int dim)
@@ -125,3 +162,5 @@ ostream& operator<<(ostream& out, const Vecteur<TYPE>& vec)
 	vec.print(out);
 	return out;
 }
+
+#endif

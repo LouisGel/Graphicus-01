@@ -12,7 +12,7 @@
 #define COUCHE_H
 
 #include "forme.h"
-#include "vecteur.h"
+#include "vecteur.hpp"
 
 #define INITIALISEE 73  //ASCII value for I
 #define ACTIVE 65       //ASCII value for A
