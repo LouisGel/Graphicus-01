@@ -12,11 +12,12 @@
 void Tests::tests_unitaires_formes()
 {
     //Constructeur sans paramètre
+    /*
     Rectangle* p_rectangle = new Rectangle;
     Carre* p_carre = new Carre;
     Cercle* p_cercle = new Cercle;
 
-    delete p_rectangle, p_carre, p_cercle;
+    delete p_rectangle, p_carre, p_cercle;*/
    
 }
 

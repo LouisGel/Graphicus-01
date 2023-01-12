@@ -41,7 +41,7 @@ bool Carre::operator==(Carre& carre) const
             carre.getAncrage().y == ancrage.y);
 }
 
-void Rectangle::afficher(ostream& stream) const
+void Carre::afficher(ostream& stream) const
 {
     stream  << "Carre(x=" << ancrage.x << endl
             << ", y=" << ancrage.y << endl
@@ -49,7 +49,7 @@ void Rectangle::afficher(ostream& stream) const
             << ", aire=" << aire() << ")" << endl;
 }
 
-ostream& operator<<(ostream& stream, const Carre carre) {
+ostream& operator<<(ostream& stream, const Carre& carre) {
     carre.afficher(stream);
     return stream;
 }

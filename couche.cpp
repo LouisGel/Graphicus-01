@@ -8,8 +8,6 @@
 
 #include "couche.h"
 
-// Implementation a faire...
-
 Couche::Couche()
 {
     _state = INITIALISEE;

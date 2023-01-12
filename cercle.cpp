@@ -57,7 +57,7 @@ void Cercle::afficher(ostream & stream) const
             << ", aire=" << aire() << ")" << endl;
 }
 
-ostream& operator<<(ostream& stream, const Cercle cercle)
+ostream& operator<<(ostream& stream, const Cercle& cercle)
 {
     cercle.afficher(stream);
     return stream;

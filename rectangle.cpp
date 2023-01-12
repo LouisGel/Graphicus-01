@@ -66,7 +66,7 @@ void Rectangle::afficher(ostream& stream) const
             << ", aire=" << aire() << ")" << endl;
 }
 
-ostream& operator<<(ostream& stream, const Rectangle rectangle)
+ostream& operator<<(ostream& stream, const Rectangle& rectangle)
 {
     rectangle.afficher(stream);
     return stream;

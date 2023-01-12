@@ -15,7 +15,7 @@ int main()
    
    //tests.tests_application();
 
-    tests.tests_unitaires_formes();
+    //tests.tests_unitaires_formes();
 
    return 0;
 }

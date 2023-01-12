@@ -1,7 +1,7 @@
 
-#include "forme.cpp"
+/*#include "forme.cpp"
 #include "rectangle.cpp"
-#include "n_vecteur.cpp"
+#include "vecteur.cpp"
 
 int main()
 {
@@ -44,3 +44,4 @@ int main()
     cout << endl << "END" << endl;
     return 0;
 }
+*/

@@ -11,12 +11,12 @@
 #ifndef COUCHE_H
 #define COUCHE_H
 
+#include "forme.h"
+#include "vecteur.h"
+
 #define INITIALISEE 73  //ASCII value for I
 #define ACTIVE 65       //ASCII value for A
 #define INACTIVE 78     //ASCII value for N
-
-#include "vecteur.h"
-#include "forme.h"
 
 class Couche
 {

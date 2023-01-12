@@ -30,9 +30,10 @@ public:
     bool operator==(Carre&) const;
 
     //Autres
-    //! Pa de besoin
+    void afficher(ostream&) const;
+
 };
 
-ostream& operator<<(ostream&, const Carre);
+ostream& operator<<(ostream&, const Carre&);
 
 #endif

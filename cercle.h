@@ -39,6 +39,6 @@ protected:
     double _rayon;
 };
 
-ostream& operator<<(ostream&, const Cercle);
+ostream& operator<<(ostream&, const Cercle&);
 
 #endif

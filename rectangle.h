@@ -33,12 +33,12 @@ public:
 
     //Autres
     virtual double aire() const;
-    virtual void afficher(ostream&) const;
+    void afficher(ostream&) const;
 
 protected:
     double _largeur, _hauteur;
 };
 
-ostream& operator<<(ostream&, const Rectangle);
+ostream& operator<<(ostream&, const Rectangle&);
 
 #endif
