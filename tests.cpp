@@ -17,7 +17,19 @@ void Tests::tests_unitaires_formes()
     Carre* p_carre = new Carre;
     Cercle* p_cercle = new Cercle;
 
-    delete p_rectangle, p_carre, p_cercle;
+    //delete p_rectangle, p_carre, p_cercle;
+
+
+    Vecteur<Forme> vec(1);
+    if(vec.pushBack(new Rectangle(2,5))) cout << "OK!" << endl;
+    if(vec.pushBack(new Carre(2))) cout << "OK!" << endl;
+    if(vec.pushBack(new Cercle(2))) cout << "OK!" << endl;
+
+
+    if(vec[0] != nullptr) cout << *(vec[0]);
+    if(vec[1] != nullptr) cout << *(vec[1]);
+    if(vec[2] != nullptr) cout << *(vec[2]);
+    
    
 }
 

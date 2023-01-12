@@ -33,7 +33,7 @@ public:
 
     //Autres
     virtual double aire() const;
-    void afficher(ostream&) const;
+    virtual void afficher(ostream&) const;
 
 protected:
     double _largeur, _hauteur;

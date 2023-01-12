@@ -19,11 +19,10 @@ class Vecteur
 {
 private:
 	TYPE** _tab;
-	int _dim;
-	int _capacity;
+	int _dim, _capacity;
 
 public:
-	Vecteur(int dim = 0);
+	Vecteur(int = 0);
     Vecteur(const Vecteur&);
 	~Vecteur();
 
@@ -48,10 +47,10 @@ ostream& operator<<(ostream& stream, const Vecteur<TYPE>& vec);
 template <class TYPE>
 Vecteur<TYPE>::Vecteur(int dim)
 {
-    assert(dim >= 0);
-    _dim = dim;
+    //assert(dim >= 0);
+    _dim = 0;
     _capacity = dim*2;
-    _tab = (dim) ? new TYPE*[_capacity]() : nullptr; 
+    _tab = (dim) ? new TYPE*[_capacity] : nullptr; 
 }
 
 template <class TYPE>
@@ -128,7 +127,7 @@ bool Vecteur<TYPE>::pushBack(TYPE* elem)
     if(elem == nullptr) return false;
     if(_dim == _capacity)
     {
-        _capacity = (_capacity == 0) ? _capacity = 2 : _capacity = _capacity * 2;
+        _capacity = (_capacity == 0) ? 2 : _capacity * 2;
         TYPE** temp_tab = new TYPE*[_capacity];
         for (int i = 0; i < _dim; i++)
             *(temp_tab + i) = *(_tab + i);

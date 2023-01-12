@@ -21,10 +21,9 @@ Couche::~Couche()
 
 bool Couche::ajouterForme(Forme* forme)
 {
+    if(forme == nullptr) return false;
     if(_state != ACTIVE) return false;
-    int old_dim = _formes.size();
-    _formes.pushBack(forme);
-    return (old_dim + 1 == _formes.size());
+    return _formes.pushBack(forme);
 }
 
 Forme* Couche::enleverForme(int pos)
@@ -44,7 +43,7 @@ double Couche::aireTotale() const
     int qt_formes = _formes.size();
     double aire_total = 0;
     for (int i = 0; i < qt_formes; i++)
-        aire_total += _formes.at(i)->aire();
+        aire_total += _formes[i]->aire();
     return aire_total;
 }
 

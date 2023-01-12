@@ -11,6 +11,7 @@
 #include "Rectangle.h"
 #include "Carre.h"
 #include "Cercle.h"
+#include "Vecteur.hpp"
 
 using namespace std;
 

@@ -43,9 +43,9 @@ bool Carre::operator==(Carre& carre) const
 
 void Carre::afficher(ostream& stream) const
 {
-    stream  << "Carre(x=" << ancrage.x << endl
-            << ", y=" << ancrage.y << endl
-            << ", c=" << _hauteur << endl
+    stream  << "Carre(x=" << ancrage.x
+            << ", y=" << ancrage.y
+            << ", c=" << _hauteur
             << ", aire=" << aire() << ")" << endl;
 }
 

@@ -51,9 +51,9 @@ double Cercle::aire() const
 
 void Cercle::afficher(ostream & stream) const
 {
-    stream  << "Carre(x=" << ancrage.x << endl
-            << ", y=" << ancrage.y << endl
-            << ", r=" << _rayon << endl
+    stream  << "Cercle(x=" << ancrage.x
+            << ", y=" << ancrage.y
+            << ", r=" << _rayon
             << ", aire=" << aire() << ")" << endl;
 }
 
