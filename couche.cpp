@@ -23,7 +23,7 @@ bool Couche::ajouterForme(Forme* forme)
 {
     if(_state != ACTIVE) return false;
     int old_dim = _formes.size();
-    _formes.push_back(forme);
+    _formes.pushBack(forme);
     return (old_dim + 1 == _formes.size());
 }
 

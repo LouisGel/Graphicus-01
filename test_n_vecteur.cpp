@@ -10,7 +10,7 @@ int main()
 
     cout << "============== TEST : Ajout élément et size" << endl;
     cout << vec_old.size() << endl;
-    vec_old.push_back(new Rectangle);
+    vec_old.pushBack(new Rectangle);
     cout << vec_old.size() << endl;
 
     cout << "============== TEST : Copieur" << endl;
@@ -19,7 +19,7 @@ int main()
     cout << "============== TEST : Clear" << endl;
     vec.clear();
     cout << vec.size() << endl;
-    vec.push_back(new Rectangle);
+    vec.pushBack(new Rectangle);
 
     cout << "============== TEST : Affichage élément" << endl;
     if(vec[0] != nullptr){
@@ -37,7 +37,7 @@ int main()
     cout << "Capacity : " << vec.capacity();
     cout << "Size : " << vec.size();
     cout << "Size : " << vec.isEmpty();
-    vec.push_back(new Rectangle);
+    vec.pushBack(new Rectangle);
     cout << "Size : " << vec.isEmpty();
 
 

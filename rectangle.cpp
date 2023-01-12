@@ -10,7 +10,7 @@
 
 Rectangle::Rectangle(double hauteur, double largeur, Coordonnee ancrage) : Forme(ancrage.x, ancrage.y)
 {
-    this->setSize(hauteur, largeur); 
+    setSize(hauteur, largeur); 
 }
 
 Rectangle::~Rectangle()

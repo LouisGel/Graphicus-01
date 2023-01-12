@@ -37,7 +37,7 @@ public:
     TYPE* at(int pos) const;
 	TYPE* operator[](int pos) const;
 
-    bool push_back(TYPE*);
+    bool pushBack(TYPE*);
     TYPE* pop(int);
 
 };
@@ -123,7 +123,7 @@ TYPE* Vecteur<TYPE>::operator[](int pos) const
 }
 
 template <class TYPE>
-bool Vecteur<TYPE>::push_back(TYPE* elem)
+bool Vecteur<TYPE>::pushBack(TYPE* elem)
 {
     if(elem == nullptr) return false;
     if(_dim == _capacity)
