@@ -62,7 +62,7 @@ void Rectangle::afficher(ostream& stream) const
     stream  << "Rectangle(x=" << ancrage.x
             << ", y=" << ancrage.y
             << ", l=" << _largeur
-            << ", l=" << _largeur
+            << ", h=" << _hauteur
             << ", aire=" << aire() << ")" << endl;
 }
 
