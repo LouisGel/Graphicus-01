@@ -1,0 +1,65 @@
+[
+    {
+        "type": "File",
+        "name": "c:\\Users\\louis\\OneDrive\\École\\Université\\S2\\APP1\\Code\\vecteur.hpp",
+        "parent_id": null,
+        "fsPath": "c:\\Users\\louis\\OneDrive\\École\\Université\\S2\\APP1\\Code\\vecteur.hpp",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "qGLQfsBzSyMj35lX"
+    },
+    {
+        "type": "File",
+        "name": "c:\\Users\\louis\\OneDrive\\École\\Université\\S2\\APP1\\Code\\graphicus-01.cpp",
+        "parent_id": null,
+        "fsPath": "c:\\Users\\louis\\OneDrive\\École\\Université\\S2\\APP1\\Code\\graphicus-01.cpp",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "FmVdtPSh6GQk2lMw"
+    },
+    {
+        "type": "File",
+        "name": "c:\\Users\\louis\\OneDrive\\École\\Université\\S2\\APP1\\Code\\tests.cpp",
+        "parent_id": null,
+        "fsPath": "c:\\Users\\louis\\OneDrive\\École\\Université\\S2\\APP1\\Code\\tests.cpp",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "PmBM601UhAFGNxLp"
+    },
+    {
+        "type": "File",
+        "name": "c:\\Users\\louis\\OneDrive\\École\\Université\\S2\\APP1\\Code\\rectangle.h",
+        "parent_id": null,
+        "fsPath": "c:\\Users\\louis\\OneDrive\\École\\Université\\S2\\APP1\\Code\\rectangle.h",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "g8SB6M7ieEkvuj1G"
+    },
+    {
+        "type": "File",
+        "name": "c:\\Users\\louis\\OneDrive\\École\\Université\\S2\\APP1\\Code\\cercle.h",
+        "parent_id": null,
+        "fsPath": "c:\\Users\\louis\\OneDrive\\École\\Université\\S2\\APP1\\Code\\cercle.h",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "kLAsWhRSoeK619qz"
+    },
+    {
+        "type": "File",
+        "name": "c:\\Users\\louis\\OneDrive\\École\\Université\\S2\\APP1\\Code\\carre.h",
+        "parent_id": null,
+        "fsPath": "c:\\Users\\louis\\OneDrive\\École\\Université\\S2\\APP1\\Code\\carre.h",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "URw2iO5PSD80ZqlQ"
+    },
+    {
+        "type": "File",
+        "name": "c:\\Users\\louis\\OneDrive\\École\\Université\\S2\\APP1\\Code\\demo.cpp",
+        "parent_id": null,
+        "fsPath": "c:\\Users\\louis\\OneDrive\\École\\Université\\S2\\APP1\\Code\\demo.cpp",
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "qM6SypRg2ICJ90Aa"
+    }
+]

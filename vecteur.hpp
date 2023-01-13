@@ -149,9 +149,10 @@ TYPE* Vecteur<TYPE>::pop(int pos)
     if(pos > _dim) return nullptr;
     TYPE* temp = *(_tab + pos);
     _dim--;
-    for (int i = pos; i < _dim; i++)
-        *(_tab + i) = *(_tab + i + 1);
-    *(_tab + _dim + 1) = nullptr; //On met le dernier elem à 0
+    if(_dim == 0)   //S'il n'y avait qu'un seule élément
+        for (int i = pos; i < _dim; i++)
+            *(_tab + i) = *(_tab + i + 1);
+    *(_tab + _dim + 1) = nullptr;   //On clean la mémoire en mettant le dernier elem à nullptr
     return temp;
 }
 
