@@ -46,7 +46,7 @@ void Carre::afficher(ostream& stream) const
     stream  << "Carre(x=" << ancrage.x
             << ", y=" << ancrage.y
             << ", c=" << _hauteur
-            << ", aire=" << aire() << ")" << endl;
+            << ", aire=" << aire() << ")";
 }
 
 ostream& operator<<(ostream& stream, const Carre& carre) {

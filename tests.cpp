@@ -20,7 +20,6 @@ void Tests::tests_unitaires_formes()
     delete p_carre;
     delete p_cercle;
 
-
     cout << "TEST  -   Constructeur avec paramètres : " << endl;
     p_rectangle = new Rectangle(1,2, {1,1});
     p_carre = new Carre(3, {1,1});
@@ -37,6 +36,29 @@ void Tests::tests_unitaires_formes()
     cout << *(p_carre);
     cout << "TEST  -   Affichage en utilisant la méthode afficher(ostream&) de la Formes : ";
     cout << cercle;
+
+    cout << "TEST  -   Affichage de l'aire d'un Rectangle : ";
+    cout << p_rectangle->aire() << endl;
+    cout << "TEST  -   Affichage de l'aire d'un Carre : ";
+    cout << p_carre->aire() << endl;
+    cout << "TEST  -   Affichage de l'aire d'un Cercle : ";
+    cout << p_cercle->aire() << endl;
+
+    cout << "TEST  -   Getteur hauteur Rectangle : ";
+    cout << p_rectangle->getHauteur() << endl;
+    cout << "TEST  -   Getteur largeur Rectangle : ";
+    cout << p_rectangle->getLargeur() << endl;
+
+    cout << "TEST  -   Setteur Rectangle : ";
+    cout << "Ancienne valeure : " << rectangle;
+    rectangle.setSize(8, 8);
+    cout << "Nouvelle valeure : " << rectangle;
+
+
+    cout << "TEST  -   Getteur ancrage d'une Forme : ";
+    cout << "x=" << p_rectangle->getAncrage().x << " y=" << p_rectangle->getAncrage().y << endl;
+
+
 
 }
 

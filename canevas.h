@@ -23,22 +23,19 @@ public:
    Canevas();
    ~Canevas();
    
-   bool reinitialiser();
-   
-   bool activerCouche(int);
-   bool cacherCouche(int);
-   
+   bool activerCouche(int);   
    bool ajouterForme(Forme*);
    bool retirerForme(int);
-   
-   double aire();
+   bool reinitialiser();
+   double aire() const;
    bool translater(int, int);
-   void afficher(ostream&);
-
+   void afficher(ostream&) const;
    Couche* getCoucheActive();
 
 private:
     Couche couches[MAX_COUCHES];
 };
+
+ostream& operator<<(ostream&, const Canevas&);
 
 #endif

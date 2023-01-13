@@ -60,8 +60,7 @@ bool Couche::translation(int horizontale, int verticale)
 void Couche::afficher(ostream& stream) const
 {
     int qt_formes = _formes.size();
-    for (int i = 0; i < qt_formes; i++)
-        stream << _formes.at(i) << endl;
+    stream << _formes << endl;
 }
 
 bool Couche::reinitialiser()
@@ -93,7 +92,12 @@ bool Couche::isInactive() const
     return (_state == INACTIVE);
 }
 
-ostream& operator<<(ostream& stream, const Couche couche)
+bool Couche::isInitialise() const
+{
+    return (_state == INITIALISEE);
+}
+
+ostream& operator<<(ostream& stream, const Couche& couche)
 {
     couche.afficher(stream);
     return stream;

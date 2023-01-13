@@ -8,8 +8,14 @@
 graphicus-01: graphicus-01.o tests.o canevas.o couche.o forme.o rectangle.o carre.o cercle.o
 	g++ -o graphicus-01 graphicus-01.o tests.o canevas.o couche.o forme.o rectangle.o carre.o cercle.o
 
+plan_tests: plan_tests.o tests.o canevas.o couche.o forme.o rectangle.o carre.o cercle.o
+	g++ -o plan_tests plan_tests.o tests.o canevas.o couche.o forme.o rectangle.o carre.o cercle.o
+
 graphicus-01.o: graphicus-01.cpp tests.h
 	g++ -c graphicus-01.cpp
+
+plan_tests.o: plan_tests.cpp
+	g++ -c plan_tests.cpp
 
 tests.o: tests.cpp tests.h canevas.h
 	g++ -c tests.cpp

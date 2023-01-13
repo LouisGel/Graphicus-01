@@ -37,12 +37,13 @@ public:
     bool setInactive();
     bool isActive() const;
     bool isInactive() const;
+    bool isInitialise() const;
 
 protected:
     Vecteur<Forme> _formes;
     char _state;
 };
 
-ostream& operator<<(ostream&, const Couche);
+ostream& operator<<(ostream&, const Couche&);
 
 #endif

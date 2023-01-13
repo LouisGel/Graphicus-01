@@ -1,27 +1,21 @@
-#include "forme.h"
-#include <iostream>
-using namespace std;
+#include "coordonnee.h"
 
 
-void test(ostream& x){
-    //! On reçois x = cout
-    //! Donc on peut faire :
-    x << "bonjour";
+void test(Coordonnee co){
+
 }
 
 
 int main(){
 
+    //! ============== Soit tu fais ça :
+    Coordonnee c;
+    c.x = 1;
+    c.y = 2;
+    test(c);
 
-    ostream* nouveau_cout;
-    Forme* forme;
-    int* x;
-    double* y;
-
-    cout << "salut";
-    test(cout);
+    //! ============== Ou tu peux aussi définir une struct comme ça :
+    test({1,2});    //* Avec la première valeur qui sera égale à x et la deuxième à y
 
     return 0;
 }
-
-

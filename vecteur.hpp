@@ -105,7 +105,7 @@ template <class TYPE>
 void Vecteur<TYPE>::print(ostream& sortie) const
 {
 	for (int i = 0; i < _dim; i++)
-		sortie << *(_tab + i) << " ";
+		sortie << *(*(_tab + i)) << endl;
 }
 
 template <class TYPE>
@@ -149,7 +149,7 @@ TYPE* Vecteur<TYPE>::pop(int pos)
     if(pos > _dim) return nullptr;
     TYPE* temp = *(_tab + pos);
     _dim--;
-    if(_dim == 0)   //S'il n'y avait qu'un seule élément
+    if(_dim != 0)   //S'il n'y avait qu'un seule élément
         for (int i = pos; i < _dim; i++)
             *(_tab + i) = *(_tab + i + 1);
     *(_tab + _dim + 1) = nullptr;   //On clean la mémoire en mettant le dernier elem à nullptr

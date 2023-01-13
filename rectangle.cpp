@@ -63,7 +63,7 @@ void Rectangle::afficher(ostream& stream) const
             << ", y=" << ancrage.y
             << ", l=" << _largeur
             << ", h=" << _hauteur
-            << ", aire=" << aire() << ")" << endl;
+            << ", aire=" << aire() << ")";
 }
 
 ostream& operator<<(ostream& stream, const Rectangle& rectangle)

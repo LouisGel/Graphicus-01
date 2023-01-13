@@ -8,6 +8,7 @@
 ********/
 
 #include <iostream>
+#include "Canevas.h"
 #include "Rectangle.h"
 #include "Carre.h"
 #include "Cercle.h"
