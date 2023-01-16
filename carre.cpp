@@ -13,6 +13,11 @@ Carre::Carre(double longueur, Coordonnee ancrage) : Rectangle(longueur, longueur
     //Vide
 }
 
+Carre::Carre(Carre& carre) : Rectangle(carre.getHauteur(), carre.getHauteur(), carre.getAncrage())
+{
+    //Vide
+}
+
 Carre::~Carre()
 {
     _largeur = _hauteur = 0;

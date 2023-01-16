@@ -18,6 +18,7 @@ public:
 
     //Constructeurs/Destructeur
     Rectangle(double = 0, double = 0, Coordonnee = {0,0});
+    Rectangle(Rectangle&);
     virtual ~Rectangle();   //! https://www.geeksforgeeks.org/virtual-destructor/
 
     //Getters

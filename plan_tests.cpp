@@ -9,7 +9,6 @@ void printHeaderTest(int id){
     cout << "===================================" << endl;
     cout << "              TEST " << id << "               " << endl;
     cout << "===================================" << endl;
-
 }
 
 int main()
@@ -57,15 +56,15 @@ int main()
 
     //! ===================================================== Étape 9
     printHeaderTest(9);
-    if(!monDessin.activerCouche(2)) cout << "Erreur lors de l'activation de la couche 2";
+    if(!monDessin.reinitialiser(2)) cout << "Erreur lors de la réinitialisation de la couche 4 ";
 
     //! ===================================================== Étape 10
     printHeaderTest(10);
-    if(!monDessin.activerCouche(3)) cout << "Erreur lors de l'activation de la couche 3";
+    if(!monDessin.reinitialiser(3)) cout << "Erreur lors de la réinitialisation de la couche 4 ";
 
     //! ===================================================== Étape 11
     printHeaderTest(11);
-    if(!monDessin.activerCouche(4)) cout << "Erreur lors de l'activation de la couche 4";
+    if(!monDessin.reinitialiser(4)) cout << "Erreur lors de la réinitialisation de la couche 4 ";
 
     //! ===================================================== Étape 12
     printHeaderTest(12);
@@ -73,7 +72,7 @@ int main()
 
     //! ===================================================== Étape 13
     printHeaderTest(13);
-    cout << "Affichage du canevas : " << endl << monDessin.aire() << endl;
+    cout << "Aire total du Canevas : " << monDessin.aire() << endl;
 
     //! ===================================================== Étape 14
     printHeaderTest(14);
@@ -86,7 +85,7 @@ int main()
 
     //! ===================================================== Étape 16
     printHeaderTest(16);
-    cout << "Affichage du canevas : " << endl << monDessin.aire() << endl;
+    cout << "Aire total du Canevas : " << monDessin.aire() << endl;
 
     //! ===================================================== Étape 17
     printHeaderTest(17);
@@ -98,7 +97,7 @@ int main()
 
     //! ===================================================== Étape 19
     printHeaderTest(19);
-    cout << "Affichage du canevas : " << endl << monDessin.aire() << endl;
+    cout << "Aire total du Canevas : " << monDessin.aire() << endl;
 
 
     return 0;

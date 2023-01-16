@@ -26,7 +26,8 @@ public:
    bool activerCouche(int);   
    bool ajouterForme(Forme*);
    bool retirerForme(int);
-   bool reinitialiser();
+   bool reinitialiser();        //Réinitialise la couche activé
+   bool reinitialiser(int);     //Réinitialise la couche à l'index...
    double aire() const;
    bool translater(int, int);
    void afficher(ostream&) const;

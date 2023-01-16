@@ -38,6 +38,7 @@ public:
     bool isActive() const;
     bool isInactive() const;
     bool isInitialise() const;
+    bool isEmpty() const;
 
 protected:
     Vecteur<Forme> _formes;

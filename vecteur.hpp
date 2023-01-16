@@ -47,7 +47,7 @@ ostream& operator<<(ostream& stream, const Vecteur<TYPE>& vec);
 template <class TYPE>
 Vecteur<TYPE>::Vecteur(int dim)
 {
-    //assert(dim >= 0);
+    assert(dim >= 0);
     _dim = 0;
     _capacity = dim*2;
     _tab = (dim) ? new TYPE*[_capacity] : nullptr; 
@@ -98,7 +98,7 @@ int Vecteur<TYPE>::capacity() const
 template <class TYPE>
 bool Vecteur<TYPE>::isEmpty() const
 {
-    return (_dim > 0);
+    return (_dim == 0);
 }
 
 template <class TYPE>
@@ -146,6 +146,7 @@ bool Vecteur<TYPE>::pushBack(TYPE* elem)
 template <class TYPE>
 TYPE* Vecteur<TYPE>::pop(int pos)
 {
+    if(_dim == 0) return nullptr;
     if(pos > _dim) return nullptr;
     TYPE* temp = *(_tab + pos);
     _dim--;

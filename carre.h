@@ -17,10 +17,11 @@ public:
 
     //Constructeurs/Destructeur
     Carre(double = 0, Coordonnee = {0,0});
+    Carre(Carre&);
     ~Carre();
 
     //Getters
-    //! On en a besoin???
+    //Prend ceux de son parent : Rectangle
 
     //Setters
     void setSize(double = 0);

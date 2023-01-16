@@ -19,6 +19,7 @@ public:
 
     //Constructeurs/Destructeur
     Cercle(double = 0, Coordonnee = {0,0});
+    Cercle(Cercle&);
     ~Cercle();
 
     //Getters

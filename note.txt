@@ -1,1 +1,0 @@
-//TODO : forme.cpp destructeur, destruction de la struct coordonnee???

@@ -51,7 +51,6 @@ bool Couche::translation(int horizontale, int verticale)
 {
     if(_state != ACTIVE) return false;
     int qt_formes = _formes.size();
-    if(!qt_formes) return false;
     for (int i = 0; i < qt_formes; i++)
         _formes.at(i)->translater(horizontale, verticale);
     return true;
@@ -95,6 +94,11 @@ bool Couche::isInactive() const
 bool Couche::isInitialise() const
 {
     return (_state == INITIALISEE);
+}
+
+bool Couche::isEmpty() const
+{
+    return _formes.isEmpty();
 }
 
 ostream& operator<<(ostream& stream, const Couche& couche)

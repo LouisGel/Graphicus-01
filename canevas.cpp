@@ -11,7 +11,6 @@
 Canevas::Canevas()
 {
     reinitialiser();
-    couches[0].setActive();
 }
 
 Canevas::~Canevas()
@@ -23,7 +22,14 @@ bool Canevas::reinitialiser()
 {
     for (int i = 0; i < MAX_COUCHES; i++)
         if(!couches[i].reinitialiser()) return false;
+    if(!couches[0].setActive()) return false;
     return true;
+}
+
+bool Canevas::reinitialiser(int index)
+{
+    if(index > MAX_COUCHES) return false;
+    return (couches[index].reinitialiser());
 }
 
 bool Canevas::activerCouche(int index)
@@ -50,7 +56,7 @@ bool Canevas::retirerForme(int index)
     if(index > MAX_COUCHES) return false;
     Couche* coucheActive = this->getCoucheActive();
     if(coucheActive == nullptr) return false;
-    if(!coucheActive->enleverForme(index)) return false;
+    if(coucheActive->enleverForme(index) == nullptr) return false;
     return true;    
 }
 
@@ -72,9 +78,13 @@ bool Canevas::translater(int deltaX, int deltaY)
 
 void Canevas::afficher(ostream& stream) const
 {
-    for (int i = 0; i < MAX_COUCHES; i++)
-        if(!couches[i].isInitialise())
+    for (int i = 0; i < MAX_COUCHES; i++) //Pour toutes les couches imprimer ce qu'il y a, sinon imprimer son État
+        if(!couches[i].isEmpty())
             stream << "----- Couche " << i << endl << couches[i];
+        else if(couches[i].isActive())
+            stream << "----- Couche " << i << endl << "Couche Active" << endl;
+        else if(couches[i].isInactive())
+            stream << "----- Couche " << i << endl << "Couche Inactive" << endl;
         else
             stream << "----- Couche " << i << endl << "Couche initialisee" << endl;
 }

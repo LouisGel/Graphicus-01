@@ -13,6 +13,12 @@ Rectangle::Rectangle(double hauteur, double largeur, Coordonnee ancrage) : Forme
     setSize(hauteur, largeur); 
 }
 
+Rectangle::Rectangle(Rectangle& rectangle) : Forme(rectangle.getAncrage().x, rectangle.getAncrage().y)
+{
+    _hauteur = rectangle.getHauteur();
+    _largeur = rectangle.getLargeur();
+}
+
 Rectangle::~Rectangle()
 {
     _largeur = _hauteur = 0;

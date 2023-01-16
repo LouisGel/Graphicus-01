@@ -13,6 +13,11 @@ Cercle::Cercle(double rayon, Coordonnee ancrage) : Forme(ancrage.x, ancrage.y)
     _rayon = rayon;
 }
 
+Cercle::Cercle(Cercle& cercle) : Forme(cercle.getAncrage().x, cercle.getAncrage().y)
+{
+    _rayon = cercle.getRayon();
+}
+
 Cercle::~Cercle()
 {
     _rayon = 0;
